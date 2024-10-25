@@ -52,8 +52,6 @@ def verify_guess(player_number:str)->bool:
 
 print(f'Olá, você tem {attempts} tentativas nesse jogo de advinhação.')
 print(f'Escolha um número de 1 até 100. Insira somente números.')
-print(chosen_number)
-print()
 
 while attempts>0:
     print()
