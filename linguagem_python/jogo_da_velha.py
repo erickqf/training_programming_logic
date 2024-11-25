@@ -92,10 +92,11 @@ def checar_vitoria(jogador:str):
 print("Você acaba de entrar no jogo da velha, feita por Erick.")
 
 print("Nesse jogo insira somente números. Lembrando que só podera inserir os que estão vagos.")
+input('Pressione qualquer tecla para começar\n')
 
 jogador=jogadores[0]
 while True:
-  print(jogador)
+
   mostrar_cerquilha()
   escolha=input("Jogador '{}' é a sua vez: \n".format(jogador))
   inserido=inserir_valor_cerquilha(escolha,jogador)
@@ -105,6 +106,9 @@ while True:
     continue
 
   if checar_empate():
+    if escolha_continuar.lower().strip()=='s':
+      cerquilha=cerquilha_original.copy()
+      continue
     print('Deu empate')
     break
   
